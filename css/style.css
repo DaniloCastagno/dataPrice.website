@@ -438,16 +438,53 @@ footer {
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
   
   .hero p {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.5;
   }
   
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-buttons .cta-button {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Feature Cards Mobile */
+  .flexible-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
   
   .contact-grid {
@@ -459,6 +496,28 @@ footer {
     transform: none;
   }
   
+  /* Section spacing */
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+  
+  /* Typography improvements */
+  h2 {
+    font-size: 1.875rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
   .pricing-card.popular:hover {
     transform: translateY(-4px);
   }
@@ -467,6 +526,49 @@ footer {
 @media (max-width: 480px) {
   .container {
     padding: 0 15px;
+  }
+  
+  /* Extra small screens - optimize for mobile */
+  .hero h1 {
+    font-size: 1.95rem;
+    line-height: 1.15;
+  }
+  
+  .hero p {
+    font-size: 0.95rem;
+  }
+  
+  .hero-buttons .cta-button {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+  }
+  
+  .feature-icon {
+    font-size: 2.25rem !important;
+  }
+  
+  .feature-card {
+    padding: 1.25rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-header p {
+    font-size: 0.95rem;
   }
   
   .hero {

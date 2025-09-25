@@ -39,13 +39,8 @@ class AuthManager {
                 </a>
             `;
             
-            // Insert before the Contact button
-            const contactBtn = nav.querySelector('li:last-child');
-            if (contactBtn) {
-                nav.insertBefore(profileLi, contactBtn);
-            } else {
-                nav.appendChild(profileLi);
-            }
+            // Add profile button at the end (right side)
+            nav.appendChild(profileLi);
             
             // Add click event
             document.getElementById('profileBtn').addEventListener('click', (e) => {
@@ -62,13 +57,8 @@ class AuthManager {
                 </a>
             `;
             
-            // Insert before the Contact button
-            const contactBtn = nav.querySelector('li:last-child');
-            if (contactBtn) {
-                nav.insertBefore(loginLi, contactBtn);
-            } else {
-                nav.appendChild(loginLi);
-            }
+            // Add login button at the end (right side)
+            nav.appendChild(loginLi);
         }
     }
     
