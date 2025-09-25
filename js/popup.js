@@ -77,7 +77,7 @@ class WelcomePopup {
                             <div class="slide-content">
                                 <div class="icon">🚀</div>
                                 <h2>Ready to Start?</h2>
-                                <p>Join 500+ businesses already using data to dominate their markets. Get your free consultation today.</p>
+                                <p>Ready to make data-driven decisions for your business? Get your professional consultation today.</p>
                             </div>
                             <a href="index.html" class="popup-cta">Get Started Now</a>
                         </div>
