@@ -16,12 +16,12 @@ A complete professional website and Streamlit dashboard for dataPrice, a data an
 - **Flexible card alignment system** for perfect content centering
 
 #### Pages Included:
-1. **index.html** - Homepage with hero section, services overview, pricing, and contact
+1. **index.html** - Homepage with hero section, services overview, and contact
 2. **services.html** - Detailed service offerings and packages
 3. **about.html** - Company story, team, and value proposition
 4. **projects.html** - Case studies and portfolio showcase
-5. **contact.html** - Comprehensive contact form with free audit offer
-6. **pricing.html** - Detailed pricing packages and comparison
+5. **contact.html** - Comprehensive contact form with consultation booking
+
 7. **auth/login.html** - Professional company login portal
 8. **auth/register.html** - Comprehensive company registration system
 
@@ -181,7 +181,7 @@ Website/
 ├── about.html         # About page with team information
 ├── projects.html      # Projects showcase with case studies
 ├── contact.html       # Contact page with professional forms
-├── pricing.html       # Comprehensive pricing packages
+
 ├── auth/
 │   ├── login.html     # Professional company login portal
 │   └── register.html  # Company registration system
