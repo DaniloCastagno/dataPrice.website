@@ -1,0 +1,258 @@
+/* Additional Interactive Features for dataPrice Website */
+
+/* Smooth scrolling for all internal links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading states for forms */
+.form-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.form-loading .cta-button {
+    background: var(--neutral-light) !important;
+    cursor: not-allowed;
+}
+
+/* Spinner for loading states */
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Enhanced mobile menu */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--neutral-dark);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Enhanced form styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--neutral-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.1);
+}
+
+/* Enhanced button hover effects */
+.cta-button {
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(31, 111, 235, 0.3);
+}
+
+.cta-button.secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Enhanced card hover effects */
+.feature-card,
+.pricing-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover,
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress indicator for multi-step forms */
+.form-progress {
+    width: 100%;
+    height: 4px;
+    background: var(--light-gray);
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.form-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: width 0.3s ease;
+}
+
+/* Enhanced notification styles */
+.notification {
+    animation: slideInRight 0.3s ease-out;
+}
+
+.notification.success {
+    background: var(--success-color);
+}
+
+.notification.error {
+    background: #EF4444;
+}
+
+.notification.info {
+    background: var(--primary-color);
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Enhanced dashboard preview */
+.dashboard-preview {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dashboard-preview:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-preview img {
+    transition: all 0.3s ease;
+}
+
+.dashboard-preview:hover img {
+    transform: scale(1.05);
+}
+
+/* Loading skeleton for images */
+.image-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Print styles */
+@media print {
+    header,
+    footer,
+    .cta-button,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+}

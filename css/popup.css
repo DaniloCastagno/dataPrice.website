@@ -1,0 +1,319 @@
+/* Welcome Popup Styles */
+.welcome-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.welcome-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.welcome-popup {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8) translateY(50px);
+    transition: all 0.3s ease;
+}
+
+.welcome-popup-overlay.active .welcome-popup {
+    transform: scale(1) translateY(0);
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    z-index: 10001;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-close:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.popup-slider {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.popup-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.popup-slide.prev {
+    transform: translateX(-100%);
+}
+
+.popup-slide h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--neutral-dark);
+    font-weight: 700;
+}
+
+.popup-slide p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--neutral-mid);
+    max-width: 450px;
+    margin-bottom: 2rem;
+}
+
+.popup-slide .icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.popup-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.popup-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.popup-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    gap: 8px;
+    z-index: 20;
+}
+
+.popup-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.popup-dot.active {
+    background: rgba(255, 255, 255, 0.9);
+    width: 28px;
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.popup-dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+/* Slide Content Structure */
+.slide-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Next Button Styles */
+.popup-next-btn {
+    position: absolute;
+    bottom: 80px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.popup-next-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Button Positioning for Last Slide */
+.popup-cta {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(238, 90, 82, 0.3);
+    z-index: 10;
+}
+
+.popup-cta:hover {
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(238, 90, 82, 0.4);
+    color: white;
+    background: linear-gradient(135deg, #ee5a52, #d63447);
+}
+
+/* Improved Gradient Backgrounds with Better Visibility */
+.popup-slide:nth-child(1) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.popup-slide:nth-child(1) h2,
+.popup-slide:nth-child(1) p {
+    color: white;
+}
+
+.popup-slide:nth-child(2) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.popup-slide:nth-child(2) h2,
+.popup-slide:nth-child(2) p {
+    color: white;
+}
+
+.popup-slide:nth-child(3) {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+}
+
+.popup-slide:nth-child(3) h2,
+.popup-slide:nth-child(3) p {
+    color: white;
+}
+
+.popup-slide:nth-child(4) {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #333;
+}
+
+.popup-slide:nth-child(4) h2,
+.popup-slide:nth-child(4) p {
+    color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .welcome-popup {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .popup-slide {
+        padding: 40px 20px 20px;
+    }
+    
+    .popup-slide h2 {
+        font-size: 1.5rem;
+    }
+    
+    .popup-slide p {
+        font-size: 1rem;
+    }
+    
+    .popup-slide .icon {
+        font-size: 3rem;
+    }
+    
+    .popup-slider {
+        height: 380px;
+    }
+    
+    .popup-next-btn {
+        bottom: 90px;
+        right: 20px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .popup-cta {
+        bottom: 90px;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .popup-indicators {
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .popup-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .popup-dot.active {
+        width: 20px;
+    }
+}

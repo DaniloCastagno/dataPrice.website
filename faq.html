@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions — dataPrice FAQ</title>
+    <meta name="description" content="Get answers to common questions about dataPrice data analytics services, pricing, implementation, and support.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-category h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--neutral-dark);
+            transition: background 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f0f0f0;
+        }
+        
+        .faq-question .toggle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            color: var(--neutral-mid);
+            line-height: 1.6;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .faq-answer ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f9ff 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">dataPrice</a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="cta-button">Contact</a></li>
+            </ul>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 120px 0 60px;">
+        <div class="container text-center">
+            <h1>Frequently Asked <span class="text-primary">Questions</span></h1>
+            <p>Find answers to common questions about our data analytics services.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="features" style="padding: 60px 0;">
+        <div class="container">
+            <div class="faq-container">
+                
+                <!-- Getting Started -->
+                <div class="faq-category">
+                    <h3>🚀 Getting Started</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What is dataPrice and how can it help my business?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>dataPrice is a data analytics service that helps small and medium businesses make better decisions with their data. We create custom dashboards, automate reports, and provide insights that help you:</p>
+                            <ul>
+                                <li>Track sales and revenue in real-time</li>
+                                <li>Understand customer behavior patterns</li>
+                                <li>Optimize inventory and reduce waste</li>
+                                <li>Predict future trends and plan accordingly</li>
+                                <li>Save time with automated reporting</li>
+                            </ul>
+                            <div class="highlight">
+                                <strong>Result:</strong> Most clients see 2-5x ROI within 6 months through better decision-making and operational efficiency.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do I need technical knowledge to use your services?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Not at all!</strong> Our solutions are designed for business owners, not technical experts. We:</p>
+                            <ul>
+                                <li>Create user-friendly dashboards that anyone can understand</li>
+                                <li>Provide training to your team on how to use the tools</li>
+                                <li>Handle all technical setup and maintenance</li>
+                                <li>Use simple, clear language in all reports</li>
+                                <li>Offer ongoing support whenever you need help</li>
+                            </ul>
+                            <p>If you can use a smartphone, you can use our data solutions!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What types of businesses do you work with?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We work with businesses across all industries, including:</p>
+                            <ul>
+                                <li><strong>Retail & E-commerce:</strong> Sales tracking, inventory management, customer analytics</li>
+                                <li><strong>Restaurants:</strong> Food cost analysis, staff scheduling, customer preferences</li>
+                                <li><strong>Healthcare:</strong> Patient analytics, operational efficiency, compliance reporting</li>
+                                <li><strong>Manufacturing:</strong> Production monitoring, quality control, supply chain optimization</li>
+                                <li><strong>Professional Services:</strong> Project profitability, resource utilization, client analytics</li>
+                                <li><strong>Construction:</strong> Project tracking, cost analysis, resource planning</li>
+                            </ul>
+                            <p>No matter your industry, if you have data, we can help you use it better!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing & Plans -->
+                <div class="faq-category">
+                    <h3>💰 Pricing & Plans</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How much do your services cost?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer three affordable plans designed for different business needs:</p>
+                            <div class="highlight">
+                                <ul>
+                                    <li><strong>Starter (₹4,999/month):</strong> 1 dashboard, 3 data sources, monthly reports</li>
+                                    <li><strong>Growth (₹9,999/month):</strong> 3 dashboards, 8 data sources, predictive analytics</li>
+                                    <li><strong>Premium (₹19,999/month):</strong> Unlimited dashboards, AI insights, dedicated support</li>
+                                </ul>
+                            </div>
+                            <p>All plans include setup, training, and ongoing support. No hidden fees or surprise charges!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Is there a setup fee or contract required?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>No setup fees!</strong> All our pricing is transparent and includes:</p>
+                            <ul>
+                                <li>Complete system setup and configuration</li>
+                                <li>Data integration from your existing systems</li>
+                                <li>Custom dashboard design</li>
+                                <li>Team training and onboarding</li>
+                                <li>First month of support</li>
+                            </ul>
+                            <p><strong>Contracts:</strong> We offer both monthly and annual plans. Annual plans come with 2 months free!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can I upgrade or downgrade my plan later?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Absolutely!</strong> We understand that business needs change. You can:</p>
+                            <ul>
+                                <li>Upgrade anytime to access more features</li>
+                                <li>Downgrade at the end of your billing cycle</li>
+                                <li>Pause service temporarily if needed</li>
+                                <li>Add extra dashboards or data sources as needed</li>
+                            </ul>
+                            <p>Just contact our support team, and we'll make the changes within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Implementation & Setup -->
+                <div class="faq-category">
+                    <h3>⚙️ Implementation & Setup</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How long does it take to set up my data solution?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most projects are completed within <strong>2-6 weeks</strong>, depending on complexity:</p>
+                            <ul>
+                                <li><strong>Week 1:</strong> Data audit and planning</li>
+                                <li><strong>Week 2-3:</strong> System setup and data integration</li>
+                                <li><strong>Week 4-5:</strong> Dashboard creation and testing</li>
+                                <li><strong>Week 6:</strong> Training and go-live</li>
+                            </ul>
+                            <div class="highlight">
+                                <p><strong>Simple projects</strong> (1-2 data sources) can be ready in just 1-2 weeks!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What data sources can you connect to?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We can connect to virtually any system that stores your business data:</p>
+                            <ul>
+                                <li><strong>Sales Systems:</strong> Shopify, WooCommerce, Amazon, eBay, custom POS systems</li>
+                                <li><strong>Accounting:</strong> QuickBooks, Tally, Zoho Books, Excel spreadsheets</li>
+                                <li><strong>CRM:</strong> Salesforce, HubSpot, Zoho CRM, custom databases</li>
+                                <li><strong>Marketing:</strong> Google Analytics, Facebook Ads, Email platforms</li>
+                                <li><strong>Operations:</strong> Inventory systems, ERP software, custom databases</li>
+                                <li><strong>Files:</strong> Excel, CSV, Google Sheets, and more</li>
+                            </ul>
+                            <p>If you're not sure about your systems, we'll do a free audit to identify all your data sources.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Will this disrupt my current business operations?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>No disruption at all!</strong> Our implementation process is designed to be completely non-intrusive:</p>
+                            <ul>
+                                <li>We work with copies of your data, never the originals</li>
+                                <li>No changes to your existing systems or processes</li>
+                                <li>Setup happens in the background</li>
+                                <li>Your team continues normal operations</li>
+                                <li>Go-live is seamless with full support</li>
+                            </ul>
+                            <p>Many clients don't even notice the implementation happening until they see their new dashboards!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Security -->
+                <div class="faq-category">
+                    <h3>🔒 Data & Security</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Is my business data safe and secure?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Absolutely!</strong> Data security is our top priority. We use:</p>
+                            <ul>
+                                <li><strong>Encryption:</strong> All data is encrypted both in transit and at rest</li>
+                                <li><strong>Secure Hosting:</strong> Enterprise-grade cloud infrastructure</li>
+                                <li><strong>Access Controls:</strong> Only authorized personnel can access your data</li>
+                                <li><strong>Regular Backups:</strong> Multiple backup copies in different locations</li>
+                                <li><strong>Compliance:</strong> We follow industry best practices and regulations</li>
+                            </ul>
+                            <div class="highlight">
+                                <p><strong>Your data stays yours.</strong> We never share, sell, or use your data for any purpose other than providing your analytics services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What happens to my data if I cancel the service?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We believe in complete data ownership and transparency:</p>
+                            <ul>
+                                <li><strong>Data Export:</strong> We'll provide all your data in standard formats</li>
+                                <li><strong>30-Day Grace:</strong> Your dashboards remain accessible for 30 days after cancellation</li>
+                                <li><strong>Complete Deletion:</strong> After 30 days, all your data is permanently deleted from our systems</li>
+                                <li><strong>Documentation:</strong> You'll receive all setup documentation and configurations</li>
+                            </ul>
+                            <p><strong>No lock-in!</strong> Your data and insights remain fully accessible to you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support & Training -->
+                <div class="faq-category">
+                    <h3>🎓 Support & Training</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What kind of training and support do you provide?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide comprehensive training and ongoing support:</p>
+                            <ul>
+                                <li><strong>Initial Training:</strong> 2-hour hands-on session for your team</li>
+                                <li><strong>User Guides:</strong> Simple, illustrated guides for all features</li>
+                                <li><strong>Video Tutorials:</strong> Step-by-step video instructions</li>
+                                <li><strong>Email Support:</strong> Response within 24 hours (usually much faster)</li>
+                                <li><strong>Phone Support:</strong> Available for urgent issues</li>
+                                <li><strong>Monthly Check-ins:</strong> Regular calls to ensure everything runs smoothly</li>
+                            </ul>
+                            <div class="highlight">
+                                <p><strong>Premium Plan Bonus:</strong> Dedicated account manager and priority support!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can you help us interpret the data and insights?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Yes!</strong> We don't just provide data – we help you understand what it means:</p>
+                            <ul>
+                                <li><strong>Monthly Insights:</strong> Written analysis of key trends and opportunities</li>
+                                <li><strong>Recommendation Reports:</strong> Specific actions you can take to improve</li>
+                                <li><strong>Industry Benchmarks:</strong> How you compare to similar businesses</li>
+                                <li><strong>Strategy Sessions:</strong> Quarterly calls to discuss growth opportunities</li>
+                                <li><strong>Alert System:</strong> Automated notifications for important changes</li>
+                            </ul>
+                            <p>Think of us as your data analytics team, not just a software provider!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Questions -->
+                <div class="faq-category">
+                    <h3>🛠️ Technical Questions</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do I need to install any software?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>No software installation required!</strong> Everything works through your web browser:</p>
+                            <ul>
+                                <li>Access dashboards from any device with internet</li>
+                                <li>Works on desktop, tablet, and mobile</li>
+                                <li>Automatic updates – always latest version</li>
+                                <li>No IT support needed from your side</li>
+                                <li>Share reports easily with team members</li>
+                            </ul>
+                            <p>Just open your browser, log in, and start exploring your data!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can multiple team members access the dashboards?</span>
+                            <span class="toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Yes!</strong> All plans include multiple user access:</p>
+                            <ul>
+                                <li><strong>Starter:</strong> Up to 3 users</li>
+                                <li><strong>Growth:</strong> Up to 8 users</li>
+                                <li><strong>Premium:</strong> Unlimited users</li>
+                            </ul>
+                            <p><strong>User Permissions:</strong> You can control what each person can see and do:</p>
+                            <ul>
+                                <li>View-only access for some users</li>
+                                <li>Full admin access for managers</li>
+                                <li>Department-specific dashboards</li>
+                                <li>Individual user activity tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Still Have Questions -->
+                <div style="background: var(--light-gray); padding: 3rem; border-radius: 12px; text-align: center; margin-top: 3rem;">
+                    <h3 style="color: var(--neutral-dark); margin-bottom: 1rem;">Still Have Questions?</h3>
+                    <p style="color: var(--neutral-mid); margin-bottom: 2rem;">
+                        Can't find what you're looking for? Our team is here to help!
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="cta-button">Contact Us</a>
+                        <a href="mailto:abuisness474@gmail.com" class="cta-button secondary">Email Direct</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>dataPrice</h3>
+                    <p>Transform your business with powerful data analytics and custom dashboards. Making data simple for everyone.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">📧</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="GitHub">💻</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Data Analytics</a>
+                    <a href="services.html">Dashboard Creation</a>
+                    <a href="services.html">Business Intelligence</a>
+                    <a href="services.html">Data Automation</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="projects.html">Portfolio</a>
+                    <a href="index.html#pricing">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#">Help Center</a>
+                    <a href="contact.html">Contact Support</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 dataPrice. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ JavaScript -->
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.toggle');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            document.querySelectorAll('.toggle').forEach(item => {
+                if (item !== toggle) {
+                    item.textContent = '+';
+                }
+            });
+            
+            // Toggle current FAQ
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                answer.classList.add('active');
+                toggle.textContent = '−';
+            }
+        }
+
+        // Mobile Menu Script
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard — dataPrice</title>
+    <meta name="description" content="Your dataPrice business dashboard with analytics, reports, and insights.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    <style>
+        .dashboard-container {
+            min-height: 100vh;
+            background: var(--bg-color);
+            padding-top: 80px;
+        }
+        
+        .dashboard-header {
+            background: var(--white);
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .dashboard-title {
+            font-size: 2rem;
+            color: var(--neutral-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .dashboard-subtitle {
+            color: var(--neutral-mid);
+            font-size: 1.1rem;
+        }
+        
+        .dashboard-content {
+            padding: 3rem 0;
+        }
+        
+        .welcome-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 3rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .welcome-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .welcome-card p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .action-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .action-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .action-title {
+            font-size: 1.25rem;
+            color: var(--neutral-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .action-description {
+            color: var(--neutral-mid);
+            font-size: 0.95rem;
+        }
+        
+        .dashboard-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--neutral-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .coming-soon {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--neutral-mid);
+        }
+        
+        .coming-soon-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">dataPrice</a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" id="profileBtn" class="cta-button">👤 Profile</a></li>
+            </ul>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <div class="container">
+                <h1 class="dashboard-title">Welcome to Your Business Dashboard</h1>
+                <p class="dashboard-subtitle" id="welcomeMessage">Loading your workspace...</p>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="container">
+                <div class="welcome-card">
+                    <h2>🚀 Your Data Journey Starts Here</h2>
+                    <p>Transform your business with powerful analytics and insights</p>
+                    <a href="contact.html" class="cta-button" style="background: rgba(255,255,255,0.2); border: 2px solid white;">
+                        Schedule Your Free Consultation
+                    </a>
+                </div>
+                
+                <div class="quick-actions">
+                    <div class="action-card" onclick="showComingSoon('Analytics Dashboard')">
+                        <div class="action-icon">📊</div>
+                        <div class="action-title">View Analytics</div>
+                        <div class="action-description">Access your business dashboards and reports</div>
+                    </div>
+                    
+                    <div class="action-card" onclick="showComingSoon('Data Sources')">
+                        <div class="action-icon">🔗</div>
+                        <div class="action-title">Data Sources</div>
+                        <div class="action-description">Connect and manage your data integrations</div>
+                    </div>
+                    
+                    <div class="action-card" onclick="showComingSoon('Reports')">
+                        <div class="action-icon">📈</div>
+                        <div class="action-title">Reports</div>
+                        <div class="action-description">Generate and download custom reports</div>
+                    </div>
+                    
+                    <div class="action-card" onclick="window.location.href='contact.html'">
+                        <div class="action-icon">💬</div>
+                        <div class="action-title">Get Support</div>
+                        <div class="action-description">Contact our expert team for help</div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <h3 class="section-title">Recent Activity</h3>
+                    <div class="coming-soon">
+                        <div class="coming-soon-icon">⏳</div>
+                        <h4>Coming Soon</h4>
+                        <p>Your activity feed and recent insights will appear here once your dashboards are set up.</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-section">
+                    <h3 class="section-title">Quick Stats</h3>
+                    <div class="coming-soon">
+                        <div class="coming-soon-icon">📊</div>
+                        <h4>Setting Up Your Analytics</h4>
+                        <p>Your key business metrics and KPIs will be displayed here after we configure your data sources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>dataPrice</h3>
+                    <p>Transforming business data into profitable insights for small and medium businesses worldwide.</p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Ready to get started?</strong><br>
+                        <a href="mailto:abuisness474@gmail.com" style="color: var(--white);">abuisness474@gmail.com</a>
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="services.html">Data Analytics</a>
+                    <a href="services.html">Custom Dashboards</a>
+                    <a href="services.html">Predictive Modeling</a>
+                    <a href="services.html">Process Automation</a>
+                    <a href="services.html">Data Integration</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <a href="about.html">About Us</a>
+                    <a href="projects.html">Case Studies</a>
+                    <a href="index.html#pricing">Pricing</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#">Help Center</a>
+                    <a href="contact.html">Contact Support</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 dataPrice. All rights reserved. Built with ❤️ for small businesses.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = sessionStorage.getItem('dataPriceLoggedIn');
+            const userEmail = sessionStorage.getItem('dataPriceUserEmail');
+            
+            if (!isLoggedIn) {
+                // Redirect to login if not authenticated
+                window.location.href = 'auth/login.html';
+                return;
+            }
+            
+            // Update welcome message
+            if (userEmail) {
+                const companyName = userEmail.split('@')[1].split('.')[0];
+                document.getElementById('welcomeMessage').textContent = `Hello ${companyName.charAt(0).toUpperCase() + companyName.slice(1)} team! Here's your business overview.`;
+            }
+            
+            // Profile button functionality
+            document.getElementById('profileBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                showProfileMenu();
+            });
+        });
+        
+        function showComingSoon(feature) {
+            alert(`${feature} is coming soon! We're working hard to bring you the best analytics experience. Contact us to get early access.`);
+        }
+        
+        function showProfileMenu() {
+            const userEmail = sessionStorage.getItem('dataPriceUserEmail') || 'User';
+            const isConfirmed = confirm(`Profile: ${userEmail}\n\nOptions:\n• Account Settings (Coming Soon)\n• Billing (Coming Soon)\n• Support\n• Logout\n\nClick OK to logout or Cancel to stay.`);
+            
+            if (isConfirmed) {
+                logout();
+            }
+        }
+        
+        function logout() {
+            sessionStorage.removeItem('dataPriceLoggedIn');
+            sessionStorage.removeItem('dataPriceUserEmail');
+            alert('You have been logged out successfully.');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
